@@ -1,0 +1,19 @@
+<main>
+    <section class="event">
+        <h1 class="txt-event">{{title}}</h1>
+        <p>{{description}}</p>
+        <section class="gallery">
+            {{#each gallery}}
+                <div class="gallery-event">
+                    {{#if this.video}}
+                        <video autoplay loop>
+                            <source src="{{this.video}}">
+                        </video>
+                    {{else}}
+                        <img src="{{this.image}}" alt="{{this.alt}}">
+                    {{/if}}
+                </div>
+            {{/each}}
+        </section>
+    </section>
+</main>
