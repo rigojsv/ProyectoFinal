@@ -1,0 +1,14 @@
+<div class="faq-box">
+    <h2>Preguntas Frecuentes</h2>
+    {{#each faqs}}
+    <div class="faq-item">
+        <div class="question" onclick="toggleAnswer(this)">
+            <span>{{this.question}}</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="answer" style="display: none;">
+            <p>{{this.answer}}</p>
+        </div>
+    </div>
+    {{/each}}
+</div>
