@@ -11,9 +11,6 @@ function menuToggle(){
 }
 document.addEventListener("DOMContentLoaded", onDocumentLoaded);
 
-
-/*Faq*/
-
 function toggleAnswer(element) {
     const answer = element.nextElementSibling;
     const arrow = element.querySelector('.arrow');
