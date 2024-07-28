@@ -4,6 +4,7 @@ import productsData from './pages/productsData';
 import braceletsData from './pages/braceletsData';
 import chainsData from './pages/chainsData';
 import earringsData from './pages/earringsData';
+import ringsData from './pages/ringsData';
 
 
 
@@ -27,6 +28,10 @@ const pageContext = ( page ) => {
              break;
         case '/earrings.html':
             pageVariables = earringsData;
+            break;
+        case '/rings.html':
+            pageVariables = ringsData;
+            break;
         
         default:
             break;
@@ -35,4 +40,5 @@ const pageContext = ( page ) => {
 };
 
 export default pageContext;
+
 
