@@ -3,8 +3,8 @@ import * as glob from "glob";
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import htmlPurge from 'vite-plugin-purgecss';
 import path, { resolve } from "node:path";
-import handlebars from "vite-plugin-handlebars";
-import handlerBarsContext from './js/index';
+import handlebars from 'vite-plugin-handlebars';
+import getPageContext from './js/index';
 
 export default defineConfig(
     {
@@ -33,8 +33,11 @@ export default defineConfig(
         plugins: [
             handlebars({
                 partialDirectory: resolve(__dirname, 'parciales'),
-                context: handlerBarsContext,
-            }),
+                context: (pagePath)=>{
+                    const contextVariable = getPageContext(pagePath);
+                    return contextVariable;
+            }
+    }),
             htmlPurge({}),
             ViteMinifyPlugin()
         ]

@@ -1,0 +1,14 @@
+<main>
+    <h1>Productos</h1>
+    <section class="gallery-products">
+        {{#each products}}
+        <a class="link" href="{{this.url}}">
+            <div class="gallery-item">
+                <img src="{{this.img}}" alt="{{this.alt}}">
+                <h3>{{this.title}}</h3>
+                <span class="see-more">ver mas</span>
+            </div>
+        </a>
+        {{/each}}
+    </section>
+</main>
