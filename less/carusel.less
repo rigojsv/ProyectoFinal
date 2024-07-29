@@ -9,6 +9,7 @@
         display: flex;
         width: max-content;
         height: 400px;
+        transition: transform 1s;
 
         .caruselItem {
             position: relative;
@@ -78,6 +79,10 @@
             border-radius: 50%;
             margin: 0px 0.5rem;
             cursor: pointer;
+        }
+
+        .active{
+            background-color: #000;
         }
     }
 }
