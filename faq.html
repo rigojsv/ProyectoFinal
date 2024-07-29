@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <title>SafeHN</title>
     <link rel="icon" href="resources/Logomod.jpg">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="less/faq.less">
+    <link rel="stylesheet" href="less/style.less">
     <script src="js/script.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,13 +13,7 @@
 </head>
 <body>
     {{>header}}
-    <main>
-        <section class="fondo2">
-            <section id="faq-section">
-                {{> faq }}
-            </section>
-        </section>
-    </main>
+    {{>faq}}
     {{>footer}}
 </body>
 </html>
